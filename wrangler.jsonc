@@ -9,6 +9,8 @@
   "main": "src/worker.ts",
   "compatibility_date": "2026-10-01",
   "compatibility_flags": ["nodejs_compat"],
+  "ai": { "binding": "AI" },
+  "vectorize": [{ "binding": "KB_VEC", "index_name": "pi-kb" }],
   // v1.1.0：移除 AI / Vectorize 繫結。
   // - Vectorize 需要手工建索引才有用，刪掉後知識庫退回 FTS5 關鍵詞檢索（本地 SQLite，零外部呼叫）；
   // - AI 繫結原先只用於 PDF/DOCX 轉 Markdown，刪掉後知識庫只收 Markdown / 純文本；
